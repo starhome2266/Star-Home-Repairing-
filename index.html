@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Star Home Repairing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#020617;
+color:white;
+}
+
+/* NAVBAR */
+nav{
+position:sticky;
+top:0;
+background:#020617;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+nav h2{
+color:#38bdf8;
+font-size:28px;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+margin:10px 0;
+color:#cbd5f5;
+font-size:18px;
+}
+
+.btn{
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+border-radius:25px;
+cursor:pointer;
+margin:10px;
+transition:0.3s;
+font-size:16px;
+font-weight:bold;
+color:white;
+}
+
+.btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
+
+/* SECTION */
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:36px;
+margin-bottom:30px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:18px;
+transition:0.4s;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+.card img{
+width:85px;
+height:85px;
+object-fit:contain;
+margin-bottom:15px;
+transition:0.3s;
+background:white;
+padding:10px;
+border-radius:15px;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card h3{
+font-size:20px;
+}
+
+/* GALLERY */
+.gallery img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:12px;
+}
+
+/* REVIEW NAME */
+.card h4{
+margin-top:10px;
+color:#38bdf8;
+}
+
+/* OWNER */
+.owner img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+margin:20px 0;
+border:4px solid #38bdf8;
+}
+
+/* CONTACT */
+input,textarea,select{
+width:80%;
+padding:14px;
+margin:10px;
+border-radius:10px;
+border:none;
+font-size:15px;
+}
+
+/* MAP */
+iframe{
+width:100%;
+height:320px;
+border:0;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+padding:25px;
+text-align:center;
+margin-top:30px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px;
+border-radius:50%;
+font-size:24px;
+color:white;
+text-decoration:none;
+box-shadow:0 0 15px #25D366;
+z-index:1000;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.section h2{
+font-size:28px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea,select{
+width:95%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Star Home Repair</h2>
+
+<div>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>Star Home Repairing</h1>
+
+<p>Fast, Reliable & Affordable Home Appliance Repair</p>
+
+<p>Purnea & Nearby Areas</p>
+
+<button class="btn" onclick="callNow()">Call Now</button>
+
+<button class="btn" onclick="scrollToContact()">Book Service</button>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="https://img.icons8.com/color/96/air-conditioner.png">
+<h3>AC Repair & Service</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/color/96/air-conditioner.png">
+<h3>AC Installation</h3>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/4992/4992693.png">
+<h3>RO Repair & Service</h3>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/4992/4992693.png">
+<h3>RO Installation</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/color/96/washing-machine.png">
+<h3>Washing Machine Repair</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/color/96/fridge.png">
+<h3>Fridge Repair</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/color/96/water-heater.png">
+<h3>Geyser Repair & Service</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/color/96/fan.png">
+<h3>Air Cooler Repair</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section owner">
+
+<h2>About Owner</h2>
+
+<img src="https://i.ibb.co/5gjTwKLP/IMG-20260404-WA0017.jpg">
+
+<p><b>Shibrar Alam</b></p>
+
+<p>Expert Technician in Purnea with fast & reliable service.</p>
+
+<br>
+
+<p>✔ Same Day Service</p>
+<p>✔ Expert Technicians</p>
+<p>✔ Affordable Pricing</p>
+<p>✔ Doorstep Service</p>
+<p>✔ Quick Response</p>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section gallery">
+
+<h2>Our Work Gallery</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="https://i.ibb.co/xKRW4sxt/IMG-1.jpg">
+<p>Washing Machine repair</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/Z66RPc3d/IMG-2.jpg">
+<p>AC Repair</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/yn499Yy8/IMG-3.jpg">
+<p>AC Service</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/23mkLvbV/IMG-4.jpg">
+<p>Washing Machine Service</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/1GyVxMqr/IMG-5.jpg">
+<p>AC Installation</p>
+</div>
+
+<div class="card">
+<img src="https://i.ibb.co/Y7g9pKXd/IMG-6.jpg">
+<p>Home Appliance Service</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section">
+
+<h2>Customer Reviews</h2>
+
+<div class="services">
+
+<div class="card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Very fast AC repair service. Highly recommended!"</p>
+<h4>- Rahul Kumar</h4>
+</div>
+
+<div class="card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Affordable price and expert technician. Great work!"</p>
+<h4>- Imran Ali</h4>
+</div>
+
+<div class="card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"RO service was excellent. Same day service!"</p>
+<h4>- Neha Singh</h4>
+</div>
+
+<div class="card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Washing machine repaired quickly. Very professional."</p>
+<h4>- Pooja Devi</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+
+<h2>Contact Us</h2>
+
+<p>📞 9204248031 | 8797475323</p>
+
+<p>📧 Starhomerepairing62@gmail.com</p>
+
+<p>📍 Thana Chowk, Madhubani Bazar Road, Purnea, Bihar</p>
+
+<br>
+
+<h3>Book Service</h3>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<select id="category">
+<option value="">Select Service</option>
+<option>AC Repair & Service</option>
+<option>AC Installation</option>
+<option>RO Repair & Service</option>
+<option>RO Installation</option>
+<option>Washing Machine Repair</option>
+<option>Fridge Repair</option>
+<option>Geyser Repair & Service</option>
+<option>Air Cooler Repair</option>
+</select>
+
+<textarea id="service" placeholder="Describe your problem"></textarea>
+
+<button class="btn" onclick="bookService()">Submit</button>
+
+<h3 style="margin-top:40px;">Our Location</h3>
+
+<iframe src="https://maps.google.com/maps?q=purnea&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<p>© 2026 Star Home Repairing | All Rights Reserved</p>
+
+<p>Open 7 Days (9:00 AM – 8:00 PM)</p>
+
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919204248031" target="_blank">💬</a>
+
+<script>
+
+function callNow(){
+window.location.href="tel:9204248031";
+}
+
+function scrollToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+function bookService(){
+
+let name=document.getElementById("name").value;
+
+let phone=document.getElementById("phone").value;
+
+let category=document.getElementById("category").value;
+
+let service=document.getElementById("service").value;
+
+if(name=="" || phone=="" || category==""){
+
+alert("Please fill all details");
+
+return;
+}
+
+let msg=`Name: ${name}%0APhone: ${phone}%0AService: ${category}%0AProblem: ${service}`;
+
+window.open(`https://wa.me/919204248031?text=${msg}`);
+
+}
+
+</script>
+
+</body>
+</html>
